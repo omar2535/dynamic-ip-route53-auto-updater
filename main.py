@@ -1,15 +1,18 @@
 from utils.credentials import Credentials
 import boto3
-import yaml
 from requests import get
 
 print("Starting DHCP auto updater")
 
 # Program start
 ip = get('https://api.ipify.org').text
-session = boto3.Session()
-credentials = Credentials().get_credentials()
+credentials = Credentials()
+session = boto3.Session(
+    aws_access_key_id=credentials.get_aws_access_key_id,
+    aws_secret_access_key=credentials.get_aws_secret_access_key
+)
+route53_client = session.client('route53')
 
 
-print('Public IP address is: {}'.format(ip))
+print("Complete")
 
