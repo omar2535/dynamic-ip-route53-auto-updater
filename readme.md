@@ -27,4 +27,4 @@ To use this script, an account with Route53 access is needed. The `config` folde
 
 Below is a screenshot of the records that this script sets for a website called `coolwebsite`.
 
-![Example](./docs/example.png)
+![Example](./docs/example.PNG)
