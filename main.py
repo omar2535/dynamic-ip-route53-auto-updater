@@ -11,8 +11,7 @@ session = boto3.Session(
     aws_access_key_id=credentials.get_aws_access_key_id,
     aws_secret_access_key=credentials.get_aws_secret_access_key
 )
+
 route53_client = session.client('route53')
 
-
 print("Complete")
-

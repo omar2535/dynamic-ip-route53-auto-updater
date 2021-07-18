@@ -1,18 +1,19 @@
 from typing import Dict
-from definitions import ROOT_DIR
+from definitions import CONFIG_PATH
 import yaml
 
 ASSUMED_ROLE_ARN_KEY = "assumed_role_arn"
 AWS_ACCESS_KEY_ID = "aws_access_key_id"
 AWS_SECRET_ACCESS_KEY = "aws_secret_access_key"
 AWS_SESSION_TOKEN = "aws_session_token"
+FILE_NAME = "creds.yml"
 
 class Credentials:
 
     cached_credentials = None
 
     def __init__(self) -> None:
-        with open(ROOT_DIR + "/.credentials/creds.yml", 'r') as stream:
+        with open(CONFIG_PATH + FILE_NAME, 'r') as stream:
             try:
                 self.cached_credentials = yaml.safe_load(stream)
             except yaml.YAMLError as exc:
