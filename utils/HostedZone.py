@@ -1,7 +1,9 @@
+from typing import Dict
 from definitions import CONFIG_PATH
 import yaml
 
 HOSTED_ZONE_ID = "hosted_zone_id"
+RECORDS = "records"
 FILE_NAME = "hosted_zone.yml"
 
 class HostedZone:
@@ -17,3 +19,6 @@ class HostedZone:
 
     def get_hosted_zone_id(self) -> str:
         return self.cached_hosted_zone[HOSTED_ZONE_ID]
+
+    def get_records(self) -> Dict:
+        return self.cached_hosted_zone[RECORDS]
