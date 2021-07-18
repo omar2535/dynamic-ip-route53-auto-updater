@@ -11,6 +11,14 @@ pipenv install
 pipenv run python main.py
 ```
 
+## Scheduling the job
+
+This script can be scheduled through CRON. Something like
+
+```sh
+0 3 * * * "pipenv run python main.py"
+```
+
 ## Config files
 
 To use this script, an account with Route53 access is needed. The `config` folder is used for credentials and hosted zone information.
