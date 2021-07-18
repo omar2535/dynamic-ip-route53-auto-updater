@@ -1,1 +1,8 @@
 hosted_zone_id: <hosted_zone_id>
+records:
+  - record_name: coolwebsite.com
+    record_type: A
+  - record_name: coolwebsite.blog.com
+    record_type: A
+  - record_name: www.coolwebsite.com
+    record_type: A
