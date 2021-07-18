@@ -1,4 +1,4 @@
-from utils.credentials import Credentials
+from utils.Credentials import Credentials
 import boto3
 from requests import get
 
