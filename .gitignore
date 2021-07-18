@@ -1,2 +1,7 @@
+# Default ignores
 .vscode/
-.credentials/creds.yml
+__pycache__/
+
+# Config ignores
+config/creds.yml
+config/hosted_zone.yml
